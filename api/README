@@ -1,0 +1,40 @@
+Docker:
+  build script:
+  docker-compose build python-api
+
+  run script:
+  docker-compose up python-api
+
+  login if necessary:
+  docker login -u "teambd3" -p "password123" docker.io
+
+  upload repository to docker:
+  docker-compose push python-api
+
+Kubernetes:
+
+  Deployment:
+
+    apply deployment:
+    kubectl apply -f .\kubernetes\deployments\deployment.yaml
+
+    see depolyments:
+    kubectl get deploy
+
+    delete deployment:
+    kubectl delete deploy nameOfDeploy
+
+    see Pods:
+    kubectl get pods
+
+
+  Service:
+
+    apply service:
+    kubectl apply -f .\kubernetes\services\service.yaml
+
+    see service:
+    kubectl get svc
+
+    delete deployment:
+    kubectl delete svc nameOfService

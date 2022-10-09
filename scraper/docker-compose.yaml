@@ -1,0 +1,9 @@
+version: '1'
+services:
+  python-scraper:
+    build: 
+      context: .
+    container_name: python-scraper
+    image: teambd3/python-scraper:1.0.0
+    # ports:
+    # - 5000:5000

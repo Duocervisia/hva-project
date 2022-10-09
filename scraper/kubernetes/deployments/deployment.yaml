@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-scraper-deploy
+  labels:
+    app: python-scraper-app
+spec:
+  selector:
+    matchLabels:
+      app: python-scraper-app
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: python-scraper-app
+    spec:
+      containers:
+      - name: python-scraper-app
+        image: teambd3/python-scraper:1.0.0
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "1048Mi"
+            cpu: "500m"

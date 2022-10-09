@@ -1,0 +1,9 @@
+version: '1'
+services:
+  python-api:
+    build: 
+      context: .
+    container_name: python-api
+    image: teambd3/python-api:1.0.0
+    ports:
+    - 5000:5000
