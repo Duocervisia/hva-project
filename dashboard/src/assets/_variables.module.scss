@@ -1,0 +1,9 @@
+$nav-width-np: 300;
+$nav-width: #{$nav-width-np} + 'px';
+
+$total-width-np: 1200;
+$total-width: #{$total-width-np} + 'px';
+:export{
+    navWidth: $nav-width; 
+    totalWidth: $total-width; 
+}

@@ -1,0 +1,24 @@
+@use '../../assets/variables.module';
+
+.navbar {
+    // background: white;
+    // width: variables.$nav-width;
+    // display: flex;
+    display: initial;
+    flex-direction: row;
+    padding: 0 15px;
+    margin: 15px auto;
+    align-items: unset;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
+    border-right: 2px solid #0d6efded;
+
+    button{
+      width: 100%;
+    }
+
+    select, button{
+      // height: 50px;
+      margin: 10px 0;
+    }
+}

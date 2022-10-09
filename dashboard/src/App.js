@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/navbar/Navbar';
+import './App.scss';
+import {Routes, Route} from 'react-router-dom';
+import HomeContainer from './components/containers/HomeContainer';
+import * as Constants from './Constants';
+import IndicatorContainer from './components/containers/IndicatorContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+      <Navbar/>
+      <Routes>
+        <Route path={Constants.HOME_ROUTE} exact element={HomeContainer}/>
+        <Route path={Constants.INDICATOR_ROUTE} exact element={IndicatorContainer}/>
+        <Route path={Constants.RELATIONS_ROUTE} exact element={IndicatorContainer}/>
+        <Route path={Constants.ENVIRONMENT_ROUTE} exact element={IndicatorContainer}/>
+
+      </Routes>
+  </>
   );
 }
 

@@ -1,0 +1,15 @@
+@use 'assets/variables.module';
+
+#root{
+    width: variables.$total-width;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    height: calc(100vh - 100px);
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: variables.$nav-width 1fr;
+}
+body{
+    background-image: linear-gradient(#c7c9ca, #e8e8e8);
+}
